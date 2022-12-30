@@ -81,3 +81,16 @@ html *
 
     flex-wrap: wrap;
 }
+
+@media(max-width:500px){
+    .businessCard{
+        flex-direction: column;
+    }
+    .businessCardText,.portrait{
+        text-align: center;
+    }
+
+    .socialMedia{
+        justify-content: center;
+    }
+}
