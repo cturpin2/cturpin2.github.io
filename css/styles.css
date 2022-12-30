@@ -3,21 +3,43 @@ html *
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
+.logo{
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.navSearch {
+    background-color: transparent;
+    margin:1em;
+    margin-left: auto;
+}
+
+.navbar-nav{
+    margin:auto;
+}
+
+
 /* Add a black background color to the top navigation */
 .topnav {
+    max-width: 50em;
     background-color: #333;
     overflow: hidden;
     margin: auto;
+    display:flex;
+    
+    flex-direction:row;
+    flex-wrap:wrap;
+
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
+    float:left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.5em;
 }
 
 /* Change the color of links on hover */
@@ -44,7 +66,7 @@ html *
     gap: 2em;
 
     margin: auto;
-    max-width: 35em;
+    max-width: 50em;
 
     border-bottom: 3px solid grey;
 
