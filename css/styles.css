@@ -8,6 +8,8 @@ html *
     background-color: #333;
     overflow: hidden;
     margin: auto;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
 }
 
 /* Style the links inside the navigation bar */
@@ -44,7 +46,7 @@ html *
     gap: 2em;
 
     margin: auto;
-    max-width: 35em;
+    max-width: 45em;
 
     border-bottom: 3px solid grey;
 
@@ -93,4 +95,29 @@ html *
     .socialMedia{
         justify-content: center;
     }
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.project a {
+    text-decoration: none;
+    color: inherit;
 }
