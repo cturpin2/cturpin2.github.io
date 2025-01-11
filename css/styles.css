@@ -19,7 +19,7 @@ html *
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 22px;
 }
 
 /* Change the color of links on hover */
@@ -46,7 +46,7 @@ html *
     gap: 2em;
 
     margin: auto;
-    max-width: 45em;
+    max-width: 55em;
 
     border-bottom: 3px solid grey;
 
@@ -59,6 +59,7 @@ html *
     text-align: left;
     background-color: white;
     flex-grow: 1;
+    font-size: 22px;
 
 }
 
@@ -67,7 +68,7 @@ html *
     border: 1px solid #ddd;
     border-radius: 50%;
     padding: 0px;
-    width: 9em;
+    width: 15em;
 }
 
 #social {
@@ -95,29 +96,4 @@ html *
     .socialMedia{
         justify-content: center;
     }
-}
-
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.project {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.project a {
-    text-decoration: none;
-    color: inherit;
 }
