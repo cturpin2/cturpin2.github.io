@@ -4,6 +4,7 @@
 <head>
     <title>Machine Learning Autonomous Robot Competition</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/project.css"/>
 </head>
 
 <body>
@@ -11,20 +12,74 @@
     <div class="topnav">
         <a href="./index.html">Home</a>
         <a href="./resume.html">Resume</a>
-        <a href="./projects.html">Projects</a>
+        <a class="active" href="./projects.html">Projects</a>
     </div> 
 
     <div class="project-detail">
-        <img src="images/autonomous_robot.jpg" alt="Machine Learning Autonomous Robot Competition">
+        <img src="images/ml_comp.png" alt="Machine Learning Autonomous Robot Competition">
         <h2>Machine Learning Autonomous Robot Competition</h2>
         <p>UBC, Vancouver | January 2023 – April 2023</p>
+
+        <h3>Background</h3>
+        <p>
+            The project involved developing control software for a ROS robot in a Gazebo simulation. The robot was tasked with 
+            navigating a track, identifying license plates on parked cars, and avoiding obstacles like pedestrians and trucks. 
+            Points were awarded for completing tasks while penalties were applied for collisions or leaving the track. The goal 
+            was to achieve the highest score in the shortest time.
+        </p>
+
+        <h3>Software Architecture</h3>
+        <p>The solution involved two Python scripts: one for license plate recognition and another for driving and control.</p>
+
+        <h4>License Plate Recognition</h4>
         <ul>
-            <li>Engineered control software for an autonomous simulated robot in a student competition</li>
-            <li>Designed and implemented a driving algorithm leveraging OpenCV and imitation learning for efficient navigation, ensuring collision avoidance with other vehicles and pedestrians</li>
-            <li>Applied OpenCV techniques for precise license plate isolation and successfully trained a convolutional neural network (CNN) to accurately recognize license plate characters</li>
-            <li>Secured the 2nd place position among 32 teams, underscoring the effectiveness of the developed algorithms and strategies</li>
+            <li>Used HSV filtering, morphological transformations, and contour detection for plate isolation.</li>
+            <li>Trained neural networks to recognize characters on license plates with high accuracy.</li>
+            <li>Developed a priority-based queuing system to optimize data collection and character recognition.</li>
         </ul>
+
+        <h4>Driving Algorithm</h4>
+        <ul>
+            <li>Implemented imitation learning with RGB image input for navigation.</li>
+            <li>Used three neural networks tailored for different track sections to optimize performance.</li>
+            <li>Applied post-training quantization to reduce latency and enable high-speed driving.</li>
+        </ul>
+
+        <h3>Data Collection and Training</h3>
+        <ul>
+            <li>Collected over 10,000 images for training, with a curated dataset of 4,145 letter images and 2,614 number images.</li>
+            <li>Developed tools to automate data labeling and preprocessing.</li>
+            <li>Trained networks with a learning rate of 1e-4 and batch size of 32, achieving robust model performance.</li>
+        </ul>
+
+        <h3>Obstacle Detection</h3>
+        <h4>Crosswalk and Pedestrian Detection</h4>
+        <ul>
+            <li>Used HSV filtering to identify crosswalks and detect pedestrian movement.</li>
+            <li>Implemented logic to decide whether the robot should stop or proceed based on pedestrian position and movement.</li>
+        </ul>
+
+        <h4>Truck Detection</h4>
+        <ul>
+            <li>Applied HSV filtering to track the truck's location and stop the robot when necessary to avoid collisions.</li>
+        </ul>
+
+        <h3>Performance</h3>
+        <p>
+            The robot consistently performed at high speeds, completing the course in 23 seconds with a full score, earning 
+            2nd place among 32 teams. The use of advanced algorithms and optimizations ensured reliability and precision in 
+            navigating the track and completing tasks.
+        </p>
+
+        <h3>Areas for Improvement</h3>
+        <ul>
+            <li>Optimize the driving control equations to reduce oscillations during turns.</li>
+            <li>Consolidate the three driving neural networks into a single model to simplify the system.</li>
+            <li>Explore more advanced post-training quantization techniques for further performance gains.</li>
+        </ul>
+
     </div>
+
 
 </body>
 </html>
