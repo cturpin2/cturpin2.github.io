@@ -36,6 +36,20 @@
     margin-bottom: 10px;
 }
 
+.project-detail video {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 30em;
+    width: auto;
+    border-radius: 8px;
+
+    align-self: center;
+
+
+    max-width: 100%; /* Add this line */
+    height: auto; /* Add this line */
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
     .project-detail {
