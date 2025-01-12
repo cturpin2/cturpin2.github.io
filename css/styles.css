@@ -138,3 +138,23 @@ body {
   }
   
 
+.coming-soon {
+    text-align: center;
+    padding: 10em;
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.coming-soon h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    font-size: 18px;
+    color: #666;
+}
